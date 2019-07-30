@@ -23,15 +23,15 @@
 .header {padding-bottom:25px;background:#ffffff;}
 .header:after{content:'';display:block;clear:both;}
 .header .logo {line-height:50px;font-size:17px;color:#333333;}
-.header .left{float:left;}
-.header .right{float:left;}
+.header .left{position:absolute;top:0;left:0;}
+.header .right{position:absolute;top:0;right:0;}
 .header .close{display:inline-block;width:60px;height:60px;line-height:60px;text-align:center;}
-.header .tit_wrapper{transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
-.header .title{clear: both;font-size:24px;font-weight: bold;}
+.header .tit_wrapper{padding:60px 0 0 0;transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
+.header .title{clear: both;font-size:24px;font-weight: bold;transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
 
-.header.fix{height:60px;}
-.header.fix .tit_wrapper{float:left;font-size:16px;padding:0;transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
-.header.fix .title{height:60px;font-size:16px;line-height:60px;}
+.header.fix{height:60px;box-shadow:2px 0 3px rgba(0,0,0,0.1)}
+.header.fix .tit_wrapper{height:60px;padding: 18px 0 0 60px;}
+.header.fix .title{font-size:16px;}
 
 .container {flex:1;overflow-y:auto;}
 

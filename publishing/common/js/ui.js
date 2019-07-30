@@ -1,7 +1,19 @@
 $(function(){
 	desingSelect();
 	tabMenu();
+	headerTop();
 });
+
+function headerTop(){
+	$('.container').scroll(function(){
+		var top = $(this).scrollTop();
+		if(top > 0 ){
+			$('.header').addClass('fix');
+		}else{
+			$('.header').removeClass('fix');
+		}
+	});
+}
 
 
 function popOpen(obj){
@@ -10,7 +22,6 @@ function popOpen(obj){
 		$(obj).hide();
 	});
 }
-
 
 function popClose(obj){
 	$(obj).hide();
