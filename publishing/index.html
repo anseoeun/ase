@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<script type="text/javascript" language="javascript" src="common/js/jquery-3.4.1.min.js"></script>
+
+</head>
+<!-- style -->
+<style type="text/css">
+	* {	margin:0;padding:0;}
+	body {padding:20px;	font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+	/* title */
+	h1 {color:#000; letter-spacing:-2px;}
+	.currentsite {display:block; position:absolute; right:40px; top:20px;}
+	#mwork table {width:100%; border-collapse:collapse; border:0px solid #666;margin-top:20px;}
+	#mwork caption {text-align:left; font-size:200%; color:#999;}
+	#mwork th {padding:6px; border:1px solid #fff; color:#fff; font-size:110%; background-color:#1F5DBE;}
+	#mwork td {height:16px; padding:4px; padding-left:10px; border:1px solid #666;}
+	#mwork a,
+	#mwork a:link, #mwork a:visited {color:#009; text-decoration:none;}
+	#mwork a:hover, #mwork a:active {color:#00f; text-decoration:underline;}
+	#mwork td:hover {background-color:#ddd !important;}
+</style>
+<!-- //style -->
+<!-- html body -->
+<script>
+	$(function(){
+		$('td:nth-child(1)').addClass('category');
+		$('td:nth-child(2)').addClass('depth1');
+		$('td:nth-child(3)').addClass('depth2');
+		$('td:nth-child(4)').addClass('depth3');
+		$('td:nth-child(5)').addClass('depth4');
+		$('td:nth-child(6)').addClass('css');
+		$('td:nth-child(7)').addClass('classname');
+		$('td:nth-child(8)').addClass('pagename');
+		$('td:nth-child(9)').addClass('filename');
+		$('td:nth-child(10)').addClass('complete');
+		$('td:nth-child(11)').addClass('date');
+		$('td:nth-child(12)').addClass('complete');
+		$('td:nth-child(13)').addClass('modify');
+		$('td:nth-child(14)').addClass('memo');
+		$('td:nth-child(15)').addClass('etc');
+
+		$('.filename a').each(function(){
+			var filename = $(this).text();
+			console.log('adf')
+			$(this).attr('href', filename);
+		});
+	});
+
+</script>
+</head>
+<body>
+<!-- sheet -->
+<!-- note -->
+<h1>FOSS Publishing Work Sheet</h1>
+<div id="mwork">
+	<table class="mwork">
+		<colgroup>
+			<col style="width:100px" />
+			<col style="width:100px" />
+			<col style="width:100px" />
+			<col style="width:100px" />
+			<col style="width:100px" />
+			<col style="width:100px" />
+			<col style="width:220px" />
+			<col style="width:100px" />
+			<col style="" />	
+			<col style="width:100px" />
+			<col style="width:100px" />
+			<col style="" />
+			<col style="width:100px" />
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th>Category</th>
+				<th>1Depth</th>
+				<th>2Depth</th>
+				<th>3Depth</th>
+				<th>4Depth</th>
+				<th>css</th>
+				<th>classname</th>
+				<th>화면명</th>
+				<th>FileName/Link</th>
+				<th>완료</th>
+				<th>수정</th>
+				<th>Memo</th>
+				<th>기타</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>공통</td>
+				<td>alert</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/common/alert.html</a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>비디면계좌개설</td>
+				<td>종합계좌개설</td>
+				<td>계좌개설안내</td>
+				<td>절차안내</td>
+				<td></td>
+				<td>nofacing.css</td>
+				<td>total_account_area / step_guide_area</td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/noFacing/FP-0620-01-00.html</a></td>
+				<td></td>
+				<td></td>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>비디면계좌개설</td>
+				<td>연금저축계좌개설</td>
+				<td>계좌개설안내</td>
+				<td><p>절차안내</p></td>
+				<td></td>
+				<td>nofacing.css</td>
+				<td>annuity_account_area / step_guide_area</td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/noFacing/FP-0670-01-00.html</a></td>
+				<td></td>
+				<td></td>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>개설구분선택</td>
+				<td><p>연금저축  계좌개설 비교</p></td>
+				<td></td>
+				<td>nofacing.css</td>
+				<td>annuity_account_area / account_compare_area</td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/noFacing/FP-0670-05-00.html</a></td>
+				<td></td>
+				<td></td>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>			
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>계약정보입력</td>
+				<td>안내</td>
+				<td></td>
+				<td>myasset.css</td>
+				<td>annuity_account_area/ using_guide_area</td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/myAsset/FP-0670-06-00.html</a></td>
+				<td>&nbsp;</td>
+				<td></td>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>			
+			<tr>
+				<td>내자산</td>
+				<td>이체입금</td>
+				<td>계좌정보입력</td>
+				<td>계좌정보입력</td>
+				<td></td>
+				<td>myasset.css</td>
+				<td>transfer_area/ account_input_area</td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/myAsset/SC-2402-06-00.html</a></td>
+				<td>완료</td>
+				<td></td>
+				<td>은행선택 팝업 수정예정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>입금완료</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/myAsset/SC-2402-07-01.html</a></td>
+				<td>완료</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>입금실패</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/myAsset/SC-2402-07-02.html</a></td>
+				<td>완료</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>연금저축입출금</td>
+				<td>연금저축 계좌입금</td>
+				<td>이용안내</td>
+				<td></td>
+				<td>myasset.css</td>
+				<td>annuity_inout_area  / using_guide_area</td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/myAsset/연금저축계좌입금이용안내.html</a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>			
+			<tr>
+				<td></td>
+				<td></td>
+				<td>연금저축 계좌 출금</td>
+				<td>이용안내</td>
+				<td></td>
+				<td></td>
+				<td>annuity_inout_area / using_guide_area</td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/myAsset/</a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>			
+			<tr>
+				<td>인증/보안</td>
+				<td>보안매체</td>
+				<td>OTP</td>
+				<td>안내</td>
+				<td></td>
+				<td>security.css</td>
+				<td>security_device_area / using_guide_area</td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/security/</a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>OTP사고등록/회복_안내</td>
+				<td></td>
+				<td>security.css</td>
+				<td>security_device_area / using_guide_area</td>
+				<td></td>
+				<td><a href="#none" target="_blank">html/security/</a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+			  <td>&nbsp;</td>
+			  <td>모바일이용신청</td>
+			  <td>모바일 사용등록_안내</td>
+			  <td>OTP오류횟수조회_안내</td>
+			  <td></td>
+			  <td>security.css</td>
+			  <td>mobile apply_area / using_guide_areaa</td>
+			  <td></td>
+			  <td><a href="#none" target="_blank">html/security/</a></td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+		  </tr>
+		  <tr>
+			  <td>&nbsp;</td>
+			  <td>전자금융사기예방서비스</td>
+			  <td>전자금융사기예방 서비스 안내</td>
+			  <td>OTP오류횟수조회_안내</td>
+			  <td></td>
+			  <td>security.css</td>
+			  <td>crime_prevent_area / using_guide_area</td>
+			  <td></td>
+			  <td><a href="#none" target="_blank">html/security/</a></td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+		  </tr>
+		</tbody>
+	</table>
+
+</div>
+<!-- //sheet -->
+<!-- //html body -->
+</body>
+</html>

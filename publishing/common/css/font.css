@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 300;
+    src: local("Spoqa Han Sans Light"),local("Spoqa Han Sans Light"),
+    	url("../font/Spoqa Han Sans Light.eot?#iefix") format("embedded-opentype"),
+    	url("../font/Spoqa Han Sans Light.woff2") format("woff2"),
+    	url("../font/Spoqa Han Sans Light.woff") format("woff"),
+    	url("../font/Spoqa Han Sans Light.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+    src: local("Spoqa Han Sans Regular"),local("Spoqa Han Sans Regular"),
+    	url("../font/Spoqa Han Sans Regular.eot?#iefix") format("embedded-opentype"),
+    	url("../font/Spoqa Han Sans Regular.woff2") format("woff2"),
+    	url("../font/Spoqa Han Sans Regular.woff") format("woff"),
+    	url("../font/Spoqa Han Sans Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    src: local("Spoqa Han Sans Bold"),local("Spoqa Han Sans Bold"),
+    	url("../font/Spoqa Han Sans Bold.eot?#iefix") format("embedded-opentype"),
+    	url("../font/Spoqa Han Sans Bold.woff2") format("woff2"),
+    	url("../font/Spoqa Han Sans Bold.woff") format("woff"),
+    	url("../font/Spoqa Han Sans Bold.ttf") format("truetype")
+}
+
+body,html {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%
+}
+
+body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: Spoqa Han Sans Regular,"Sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    word-break: keep-all;
+    font-weight: 400;
+}
+
+.bold, h1, h2, h3, h4, h5, h6 {font-weight:700;}
+th {font-weight:400;}
+
+

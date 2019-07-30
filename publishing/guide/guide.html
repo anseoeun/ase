@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=no">
+	<link rel='shortcut icon' href='' >
+	<link rel='apple-touch-icon' href=''>
+	
+	<title>한국포스증권 :: FOSS Moible</title>
+
+
+	
+	<link rel="stylesheet" type="text/css" href="../common/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../common/css/common.css">
+
+	<script type="text/javascript" language="javascript" src="../common/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../common/js/ui.js"></script>
+
+	<style type="text/css">
+	#wrap.guide .content{padding:20px 20px 50px;}
+	.guideH1,
+	.guideH2,
+	.guideH3 {line-height:1.7;}
+
+	.guideH1{padding: 15px 0;color:#fff;text-align:center;background: #1F5DBE;}
+	.guideH2{padding-top:30px;font-size:24px; color:#225ba9; margin-bottom:20px; border-bottom: 1px solid #b5c0cf;}
+	.guideH3{font-size:17px; line-height:1.1; margin-bottom:10px;}
+	.guideH3:before{display:inline-block; content:''; width:2px; height:2px; margin-right:5px; margin-bottom:4px; vertical-align:middle; background:#000;}
+	div + .guideH2, div + .guideH3{margin-top:50px;}
+
+	.guideMsgWrap{padding: 12px 15px; border: 2px solid #e8e8e8; }
+	.guideMsgWrap dt{font-size:16px; color:#222; line-height:1.1; font-weight:bold; margin-bottom:5px;}
+	.guideMsgWrap li, .guideMsgWrap dd{position:relative; font-size:14px; color:#777; line-height:1.5; padding-left:10px;}
+	.guideMsgWrap li:before, .guideMsgWrap dd:before{display:inline-block; content:'-'; position:absolute; left:0; top:2px; z-index:0;}
+
+	/*#region table */
+	.tblTypeGuide,.tblTypeGuide th,.tblTypeGuide td{border:0;}
+	.tblTypeGuide{width:100%; text-align:left; border-collapse:collapse; border-bottom:1px solid #dcdcdc;}
+	.tblTypeGuide caption{text-align:left; font-weight:bold;}
+	.tblTypeGuide tfoot{background-color:#f5f7f9;font-weight:bold; }
+	.tblTypeGuide th{color:#666; padding:7px 5px 4px; text-align:center; border-top:1px solid #dcdcdc; border-right:1px solid #dcdcdc; border-left:1px solid #dcdcdc; background-color:#f7f7f7;}
+	.tblTypeGuide td{padding:10px;border:1px solid #e5e5e5;color:#4c4c4c;word-break:break-all;vertical-align: top;}
+	.tblTypeGuide td.tl{text-align:left}
+	.tblTypeGuide tbody tr.over {background:#ecf1f7}
+	.tblTypeGuide tr.d{display:none}
+	.tblTypeGuide tr.d td{background-color:#ddd}
+	.tblTypeGuide tr.m td{background-color:#fffbe6}
+	.tblTypeGuide tr.newmenu td{background-color:#ffcfd2}
+	.tblTypeGuide tr.r td{background-color:#3879d9;color:white;}
+	.tblTypeGuide tr.end td{background-color:#ddd}
+	.tblTypeGuide tbody tr.m.over td {background:#ecf1f7 !important}
+	.tblTypeGuide tbody tr.r.over td {background:#3879d9 !important}
+	.tblTypeGuide .mobile{display:block;text-align:center;}
+	.tblTypeGuide1{width:100%;text-align:center;}
+	.tblTypeGuide1 th, .tblTypeGuide1 td{padding:5px; border:1px solid #dcdcdc;} 
+	.yuantaUIGuideArea {padding:20px;position:relative;/*overflow:hidden;*/-webkit-transition: -webkit-transform 200ms ease;-webkit-transform: translate3d(0, 0, 0);}
+	.yuantaUIGuideArea h2{font-size:16px}
+	.yuantaUIGuideArea h3{font-size:14px}
+	.mobile .yuantaUIGuideArea{padding:10px 0 0 0;}
+	.tblTypeGuide td.c{text-align:center}
+	.guideMsgWrap.guide ul{overflow:hidden}
+	.guideMsgWrap.typeImg.guide{min-height:140px;padding-right:30px}
+	.guideMsgWrap.guide .rCont{position:relative;min-height:110px;display:block}
+	.guideMsgWrap.guide ul li{float:left;width:150px;height:150px;position:relative;}
+	.contentWrap{padding:0;}
+	/*#endregion table */
+	
+	.guide {padding-left:200px;}
+	.content {border-left:1px solid #e8e8e8;}
+	.menu_area {position:fixed;left:0;top:0;width:200px;}
+	.logo {padding:20px 0;background:#1F5DBE;text-align:center;font-size:15px;color:#fff;}
+	.logo strong {display:block;padding-bottom:10px;font-size:50px;}
+	.menu {padding:15px;}
+	.menu li a {position:relative;display:block;padding-left:20px;line-height:2;color:#333;}
+	.menu li a:after {content:"";display:block;clear:both;position:absolute;left:10px;top:50%;margin-top:-1px;width:2px;height:2px;background:#000;}
+	.cBox {border: 1px dotted #ccc;}
+	</style>
+	
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="guide">
+		<h1 class="guideH1 hide">FOSS Mobile Web Guide</h1>
+		
+		<!-- menu_area -->
+		<div class="menu_area">
+			<div class="logo">
+				<strong>FOSS</strong>Mobile Web - Guide
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#g_text">Text</a></li>
+					<li><a href="#g_icon">Icon</a></li>
+					<li><a href="#g_button">Button</a></li>
+					<li><a href="#g_table">Table</a></li>
+					<li><a href="#g_form">Form</a></li>
+					<li><a href="#g_popup">Popup</a></li>
+					<li><a href="#g_paging">Paging</a></li>
+					<li><a href="#g_tab">Tab</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //menu_area -->
+		
+		<!-- content -->
+		<div class="content">
+						
+			<!-- ========== Text ========== -->
+			<div id="g_text" class="g_wrap">
+				<h2 class="guideH2">Text</h2>
+				<div id="g_title">
+					<table class="tblTypeGuide">
+						<caption class="blind">Icon</caption>
+						<colgroup>
+							<col style="width:10%">
+							<col style="width:auto">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">내용</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>폰트 타입</th>
+								<td>
+									<p class="bold">스포카한산스 B (SpokaHanSans B)</p>
+									<p class="">스포카한산스 R (SpokaHanSans R)</p>
+									<!-- <p class="">스포카한산스 L (SpokaHanSans L)</p> -->
+								</td>
+							</tr>
+							<tr>
+								<th>타이틀 </th>
+								<td>
+									<h2 class="tit_type1">tit1 페이지 타이틀 : 24px</h2>
+									<p class="tit_type2">tit2 문단 타이틀 대 : 16px</p>
+									<p class="tit_type3">tit3 문단 타이틀 중 : 14px</p>
+									<p class="tit_type4">tit4 문단 타이틀 소 : 12px</p>
+								</td>
+							</tr>
+							<tr>
+								<th>기본 텍스트</th>
+								<td>기본 텍스트 크기 : 14px</td>
+							</tr>
+							<tr>
+								<th>보조 텍스트</th>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<th>포인트 텍스트</th>
+								<td>
+									
+								</td>
+							</tr>
+							
+							<tr>
+								<th>완료 텍스트</th>
+								<td>
+									<div class="text_info">
+										<i class="ico ico_check1"></i>
+										<p class="txt">
+											<b class="c">150,000원</b>이 <br>
+											입금되었습니다.
+										</p>
+										<p class="txt2">외국인 및 법인은 당사 영업부, 미성년자는 우리은행/우체국/당사 영업부, 대리인은 새마을금고/당사 영업부에서 계좌개설이 가능합니다.</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>문단 텍스트</th>
+								<td>
+									<div class="btn_type2_box">
+										<a href="../html/common/paragraph.html" class="btn_type2 btn1" target="_blank">문단텍스트 가이드</a>
+									</div>									
+								</td>
+							</tr>
+							<tr>
+								<th>텍스트 컬러</th>
+								<td>
+									<p class="c_blue1">.c_blue1 {color:#1f5dbe;}</p>
+									<p class="c_gray1">.c_gray1 {color:#333;}</p>
+									<p class="c_gray2">.c_gray2 {color:#666;}</p>
+									<p class="c_gray3">.c_gray3 {color:#999;}</p>
+									<p class="c_gray4">.c_gray4 {color:#ccc;}</p>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- ========== //Text ========== -->
+		
+			<!-- ========== Icon ========== -->
+			<div id="g_icon" class="g_wrap">
+				<h2 class="guideH2">Icon</h2>
+				<div>
+					<i class="ico ico_error"></i>
+					<i class="ico ico_safe"></i>
+					<i class="ico ico_info"></i>
+
+					<i class="ico ico_check1"></i>
+					<i class="ico ico_info1"></i>
+					<i class="ico ico_x1"></i>
+				</div>
+
+			</div>
+			<!-- ========== //Icon ========== -->
+			
+			<!-- ========== Button ========== -->
+			<div id="g_button" class="g_wrap">
+				<h2 class="guideH2">Button</h2>
+				
+				<h3 class="guideH3">Type1</h3>	
+
+				<div class="btn_area">
+					<div class="btn_type1_box">
+						<a href="javascript:void(0);" class="btn_type1 btn2">확인</a>
+					</div>
+				</div>
+				<br />
+				<div class="btn_area">
+					<div class="btn_type1_box size37">
+						<a href="javascript:void(0);" class="btn_type1 btn1">받기취소</a>
+						<a href="javascript:void(0);" class="btn_type1 btn2">다시입력</a>
+					</div>
+				</div>
+				<br />
+				<div class="btn_area">
+					<div class="btn_type1_box size-half">
+						<a href="javascript:void(0);" class="btn_type1 btn1">로그인</a>
+						<a href="javascript:void(0);" class="btn_type1 btn2">비밀번호재설정</a>
+					</div>
+				</div>
+								
+				<h3 class="guideH3">Type2</h3>
+
+				<div class="btn_area">
+					<div class="btn_type2_box">
+						<a href="javascript:void(0);" class="btn_type2 btn1">발급 확인</a>
+					</div>
+				</div>
+				<br />
+				<div class="btn_area">
+					<div class="btn_type2_box">
+						<a href="javascript:void(0);" class="btn_type2 btn2">현재 단말기 지정등록</a>
+					</div>
+				</div>
+											
+			</div>
+			<!-- ========== //Button ========== -->
+						
+			<!-- ========== Table ========== -->
+			<div id="g_table" class="g_wrap">
+				<h2 class="guideH2">Table</h2>
+				
+				<h3 class="guideH3">Type1 - default (table)</h3>
+				
+				<!-- table -->
+				<table>
+					<caption>
+						<strong>000 상세표</strong>
+						<span>항목1, 항목2, 항목3 등의 항목을 제공</span>
+					</caption>
+					<colgroup>
+						<col width="30%">
+						<col width="35%">
+						<col width="35%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">제목</th>
+							<th scope="col">제목</th>
+							<th scope="col">제목</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">제목</th>
+							<td>내용</td>
+							<td>내용</td>
+						</tr>
+						<tr>
+							<th scope="row">제목</th>
+							<td>내용</td>
+							<td>내용</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //table -->
+				<br />
+				<!-- table -->
+				<table class="th-left">
+					<caption>
+						<strong>000 상세표</strong>
+						<span>항목1, 항목2, 항목3 등의 항목을 제공</span>
+					</caption>
+					<colgroup>
+						<col width="25%">
+						<col width="75%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="col">제목</th>
+							<td>내용입니다.</td>
+						</tr>
+						<tr>
+							<th scope="col">제목</th>
+							<td>내용입니다.</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //table -->		
+				<br />
+				<!-- table -->
+				<table class="tb-half">
+					<caption>
+						<strong>000 상세표</strong>
+						<span>항목1, 항목2 설명</span>
+					</caption>
+					<colgroup>
+						<col width="50%">
+						<col width="50%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">제목</th>
+							<td>내용입니다.</td>
+						</tr>
+						<tr>
+							<th scope="row">제목</th>
+							<td>내용입니다.</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //table -->							
+				
+				<h3 class="guideH3">Type2 (table class="type2")</h3>
+				
+				<!-- table -->
+				<table class="type2">
+					<caption>
+						<strong>000 상세표</strong>
+						<span>항목1, 항목2, 항목3 등의 항목을 제공</span>
+					</caption>
+					<colgroup>
+						<col width="30%">
+						<col width="35%">
+						<col width="35%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">제목</th>
+							<th scope="col">제목</th>
+							<th scope="col">제목</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="col">내용</th>
+							<td>내용<br>내용<br>내용</td>
+							<td>내용</td>
+						</tr>
+						<tr>
+							<th scope="col">내용<br>내용</th>
+							<td>내용</td>
+							<td>내용</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //table -->
+				
+				<!-- table -->
+				<table class="type2">
+					<caption>
+						<strong>000 상세표</strong>
+						<span>항목1, 항목2, 항목3 등의 항목을 제공</span>
+					</caption>
+					<colgroup>
+						<col width="20%">
+						<col width="40%">
+						<col width="40%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="col">제목</th>
+							<td>내용</td>
+							<td>내용</td>
+						</tr>
+						<tr>
+							<th scope="col">제목</th>
+							<td>내용</td>
+							<td>내용</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //table -->
+			</div>
+			<!-- ========== //Table ========== -->
+			
+			
+			<!-- ========== Form ========== -->
+			<div id="g_form" class="g_wrap">
+				<h2 class="guideH2">Form</h2>
+				<div>
+					<!-- select -->
+					<h3 class="guideH3">Select</h3>
+					<div>
+						<div class="select_type1">
+							<select name="" id="">
+								<option value="">564645116</option>
+								<option value="">588888-44878897</option>
+							</select>
+							<span class="design"><span class="placeholder">001-10-3123464</span></span>
+						</div>	
+					</div>
+					<h3 class="guideH3">input</h3>
+					<div>
+						<div class="inp_type1">
+							<label for="accountInput" class="txt_hidden">계좌번호 입력</label>
+							<input id="accountInput" type="text" placeholder="계좌번호 입력">
+						</div>
+						<div class="inp_type1">
+							<label for="accountInput" class="txt_hidden">금액 입력</label>
+							<div class="cellbox">
+								<div class="cell auto">
+									<input id="accountInput" type="text" placeholder="금액 입력">
+								</div>
+								<div class="cell won">원</div>
+							</div>
+						</div>
+						<div class="inp_type1">
+							<div class="text_error"><span class="txt">올바른 값을 입력하세요</span><span class="info"><span class="txt">취약</span><i class="ico ico_error"></i></span></div>
+							<label for="accountInput" class="txt_hidden">계좌번호 입력</label>
+							<input id="accountInput" type="text" placeholder="계좌번호 입력">
+						</div>
+						<div class="inp_type1">
+							<div class="text_safe"><span class="txt">올바른 값을 입력하세요</span><span class="info"><span class="txt">안전</span><i class="ico ico_safe"></i></span></div>
+							<label for="accountInput" class="txt_hidden">계좌번호 입력</label>
+							<input id="accountInput" type="text" placeholder="계좌번호 입력">
+						</div>
+					<h3 class="guideH3">input list</h3>
+						<div class="input_list">
+							<div class="input_box">
+								<p class="tit_type3"><span>받을계좌정보 입력</span></p>
+								<div class="cellbox">
+									<div class="cell">
+										<div class="btn_select">
+											<a href="javascript:void(0);" onclick="popOpen('#bankSelc');" class="btn"><span>은행선택</span><i class="arr"></i></a>
+										</div>
+									</div>
+									<div class="cell auto">
+										<div class="inp_type1">
+											<label for="accountInput" class="txt_hidden">계좌번호 입력</label>
+											<input id="accountInput" type="text" placeholder="계좌번호 입력">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="input_box">
+								<p class="tit_type3"><span>받을계좌정보 입력</span></p>
+								<div class="inp_type1">
+									<label for="accountInput" class="txt_hidden">계좌번호 입력</label>
+									<input id="accountInput" type="text" placeholder="계좌번호 입력">
+								</div>
+								<div class="text_error"><span class="txt">올바른 값을 입력하세요</span><span class="info"><i class="ico ico_error"></i></span></div>
+							</div>
+						</div>
+					</div>
+
+
+					<h3 class="guideH3">Check Box</h3>
+					<div>
+						<label class="inp_chk">
+							<span class="inp"><input type="checkbox" checked><span class="ic"></span></span>
+							<span class="txt">동의</span>
+						</label>
+						<label class="inp_chk">
+							<span class="inp"><input type="checkbox"><span class="ic"></span></span>
+							<span class="txt">동의</span>
+						</label>
+
+						<label class="inp_chk">
+							<span class="inp"><input type="checkbox" checked disabled><span class="ic"></span></span>
+							<span class="txt">동의</span>
+						</label>
+						<label class="inp_chk">
+							<span class="inp"><input type="checkbox" disabled><span class="ic"></span></span>
+							<span class="txt">동의</span>
+						</label>
+					</div>
+
+					<h3 class="guideH3">Radio</h3>
+
+					<div>
+						<label class="inp_radio">
+							<span class="inp"><input type="radio" name="radio" checked><span class="ic"></span></span>
+							<span class="txt">동의</span>
+						</label>
+						<label class="inp_radio">
+							<span class="inp"><input type="radio" name="radio"><span class="ic"></span></span>
+							<span class="txt">동의</span>
+						</label>
+
+						<label class="inp_radio">
+							<span class="inp"><input type="radio" checked disabled><span class="ic"></span></span>
+							<span class="txt">동의</span>
+						</label>
+						<label class="inp_radio">
+							<span class="inp"><input type="radio" disabled><span class="ic"></span></span>
+							<span class="txt">동의</span>
+						</label>
+					</div>
+
+
+					<h3 class="guideH3">Toggle</h3>
+					
+					<div>
+						<label class="inp_range">
+							<input type="checkbox" checked="" name="">
+							<i></i>
+						</label>
+					</div>
+
+
+				</div>
+			</div>
+			<!-- ========== //Form ========== -->
+
+			
+			<!-- ========== Layout ========== -->
+			<div id="g_layout" class="g_wrap">
+				<h2 class="guideH2">Layout</h2>
+				<div>
+					<a href="../html/common/layout.html">layout</a>
+				</div>
+
+				<h3 class="guideH3">cellbox</h3>
+				<div>
+					<div class="cellbox">
+						<div class="cell" style="border:1px solid #ccc">cell</div>
+						<div class="cell auto"  style="border:1px solid #ccc">cell auto</div>
+					</div>
+					<div class="cellbox cell2">
+						<div class="cell" style="border:1px solid #ccc">cell</div>
+						<div class="cell" style="border:1px solid #ccc">cell</div>
+					</div>
+					<div class="cellbox cell3">
+						<div class="cell" style="border:1px solid #ccc">cell</div>
+						<div class="cell" style="border:1px solid #ccc">cell</div>
+						<div class="cell" style="border:1px solid #ccc">cell</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- ========== //Layout ========== -->
+
+
+			<!-- ========== Popup ========== -->
+			<div id="g_popup" class="g_wrap">
+				<h2 class="guideH2">Popup</h2>
+				<div>
+					<h3 class="guideH3">Alert</h3>
+					<div>
+						<a href="../html/common/alert.html">alert</a>
+					</div>
+
+
+					<h3 class="guideH3">type1</h3>
+
+					<h3 class="guideH3">type2</h3>
+					<div>
+						<a href="../html/common/layeropup2.html">layeropup2</a>
+					</div>
+				</div>
+								
+			</div>
+			<!-- ========== //Popup ========== -->
+			
+			<!-- ========== Paging ========== -->
+			<div id="g_paging" class="g_wrap">
+				<h2 class="guideH2">Paging</h2>
+				<div>
+					<div class="pagenation">
+						<span class="btn">
+							<a href="#" class="pre end"><span>처음</span></a>
+							<a href="#" class="pre"><span>이전</span></a>
+						</span>
+						<span class="page"><strong>1</strong><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a></span>
+						<span class="btn">
+							<a href="#" class="next"><span>이후</span></a>
+							<a href="#" class="next end "><span>끝</span></a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- ========== //Paging ========== -->
+			
+			
+			<!-- ========== Tab ========== -->
+			<div id="g_tab" class="g_wrap">
+				<h2 class="guideH2">Tab</h2>
+				
+				<h3 class="guideH3">Type1</h3>
+					<!-- tab-menu -->
+					<div class="tab-menu tab2">
+						<ul>
+							<li class="on"><a href="#tabRank01">탭 메뉴1-1</a></li><!-- 활성화시 li class="on" 추가 -->
+							<li><a href="#tabRank02">탭 메뉴1-2</a></li>
+						</ul>
+					</div>
+					<!-- //tab-menu -->
+			
+					<!-- tab-panel -->
+					<div class="tab-panel" id="tabRank01">
+						메뉴1-1 컨텐츠	asdfasdf						
+					</div>
+					<!-- //tab-panel -->
+			
+					<!-- tab-pane2 -->
+					<div class="tab-pane2" id="tabRank02" style="display:none;">
+						메뉴1-2 컨텐츠
+					</div>
+					<!-- //tab-pane2 -->	
+			</div>
+			<!-- ========== //Tab ========== -->
+			
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //wrap -->
+</body>	
+</html>

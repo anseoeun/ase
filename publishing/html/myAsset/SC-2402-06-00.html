@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../../common/css/base.css" />
+<link type="text/css" rel="stylesheet" href="../../common/css/common.css" />
+<link type="text/css" rel="stylesheet" href="../../common/css/myasset.css" />
+<script type="text/javascript" language="javascript" src="../../common/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" language="javascript" src="../../common/js/ui.js"></script>
+
+</head>
+<body class="bg_gray">
+
+<!-- wrap -->
+<div class="wrap">
+	<!-- container -->
+	<div class="container">
+		<!-- 고정되지 않는 헤더 (container) -->
+		<div class="header">
+			<div class="pd_wrapper">
+				<h1 class="logo">FOSS</h1>
+			</div>
+		</div>
+		<!-- // 고정되지 않는 헤더 (container) -->
+		<!-- content -->
+		<div class="content">
+			<!-- transfer_area -->
+			<div class="transfer_area account_input_area">
+				<div class="pd_wrapper bg_white">
+					<!-- text_info -->
+					<div class="text_info">
+						<i class="ico ico_check1"></i>
+						<p class="txt">
+							홍길동님께서 <br>
+							<b class="c">150,000</b>원을 <br>
+							보내셨습니다.
+						</p>
+					</div>
+					<!-- // text_info -->
+
+					<!-- input_account -->
+					<div class="input_account">
+						<div class="input_box">
+							<p class="tit_type3"><span>받을계좌정보 입력</span></p>
+							<div class="cellbox">
+								<div class="cell">
+									<div class="btn_select">
+										<a href="javascript:void(0);" onclick="popOpen('#bankSelc');" class="btn"><span>은행선택</span><i class="arr"></i></a>
+									</div>
+								</div>
+								<div class="cell auto">
+									<div class="inp_type1">
+										<label for="accountInput" class="txt_hidden">계좌번호 입력</label>
+										<input id="accountInput" type="text" placeholder="계좌번호 입력">
+									</div>
+								</div>
+							</div>
+							<div class="text_error"><span class="txt">유효성체크 메세지(계좌번호)</span><span class="info"><i class="ico ico_error"></i></span></div>
+						</div>
+					</div>
+					<!-- // input_account -->
+				</div>
+
+				<div class="pd_wrapper">
+					<!-- site_rule -->
+					<div class="site_rule">
+						<p class="tit_type3"><b>개인정보수집이용 동의</b></p>
+						<div class="txt_rule">
+							개인정도수집이용동의내용입니다. 개인정도수집이용동의내
+							용입니다. 개인정도수집이용동의내용입니다. 개인정도수집
+							이용동의내용입니다. 개인정도수집이용동의내용입니다.개인
+							정도수집이용동의내용입니다. 개인정도수집이용동의내용입
+							니다. 개인정도수집이용동의내용입니다.
+						</div>
+						<div class="check_agree">
+							<label class="inp_chk">
+								<span class="inp"><input type="checkbox"><span class="ic"></span></span>
+								<span class="txt">개인정보수집이용에 동의합니다.</span>
+							</label>
+						</div>
+						<div class="text_error"><span class="txt">유효성체크 메세지(개인정보수집이용)</span><span class="info"><i class="ico ico_error"></i></span></div>
+					</div>
+					<!-- // site_rule -->
+				</div>
+	 
+			</div>
+			<!-- // transfer_area -->
+		</div>
+		<!-- // content -->
+	</div>	
+	<!-- // container -->	
+
+	<!-- footer -->
+	<div class="footer">
+		<!-- btn_area -->
+		<div class="btn_area">
+			<div class="btn_type1_box">
+				<a href="javascript:void(0);" class="btn_type1 btn2">확인</a>
+			</div>
+		</div>
+		<!-- // btn_area -->
+	</div>	
+	<!-- // footer -->
+</div>
+<!-- // wrap -->
+
+<!-- layerPopup -->
+<div class="layerPopup2" id="bankSelc" style="display:none">
+	<div class="dim"></div>
+	<div class="popup_wrap">
+		<div class="popup">
+			<a href="#none" class="close" onclick="popClose('#bankSelc')"><i class="ico ico_x1"></i></a>
+			<span class="line"></span>
+			<div class="pop_body">
+				<div class="pop_padding">
+					<div class="scroll">
+						<dl class="dl_type1">
+							<dt>은행</dt>
+							<dd>
+								<ul class="list_bankl">
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">BOA은행</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">HSBC은행</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">KEB하나</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">K뱅크</span></a>	
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">SC은행</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">BOA은행</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">HSBC은행</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">KEB하나</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">K뱅크</span></a>	
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">SC은행</span></a>
+									</li>
+								</ul>
+							</dd>
+							<dt>증권</dt>
+							<dd>
+								<ul class="list_bankl">
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">경남은행</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">광주은행</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">국민은행</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);"><i></i><span class="txt">기술보증</span></a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layerPopup -->
+
+</body>
+
+</html>
