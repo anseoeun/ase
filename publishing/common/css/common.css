@@ -9,8 +9,8 @@
 	04. Form
 	05. Button
 	06. Common content
-	07. Pagenation
-	08. Table
+	07. Table
+	08. Information Guide
 ========================================  */
 
 /* ======================================== 
@@ -26,16 +26,16 @@
 .header .left{position:absolute;top:0;left:0;}
 .header .right{position:absolute;top:0;right:0;}
 .header .close{display:inline-block;width:60px;height:60px;line-height:60px;text-align:center;}
-.header .tit_wrapper{padding:60px 0 0 0;transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
+.header .tit_wrapper{padding:60px 0 0 20px;transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
 .header .title{clear: both;font-size:24px;font-weight: bold;transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
 
 .header.fix{height:60px;box-shadow:2px 0 3px rgba(0,0,0,0.1)}
-.header.fix .tit_wrapper{height:60px;padding: 18px 0 0 60px;}
+.header.fix .tit_wrapper{height:60px;padding:21px 0 0 60px;}
 .header.fix .title{font-size:16px;}
 
 .container {flex:1;overflow-y:auto;}
 
-.content{}
+.content{padding-bottom:30px;}
 
 .footer {}
 
@@ -61,6 +61,8 @@
 .ico.ico_safe{width:18px;height:18px;background:url('../../images/com/ico_safe.png') no-repeat 0 0;}
 .ico.ico_check{width:18px;height:18px;background:url('../../images/com/ico_safe.png') no-repeat 0 0;}
 .ico.ico_info{width:18px;height:18px;background:url('../../images/com/ico_info_black.png') no-repeat 0 0;}
+.ico.ico_talk{width:19px;height:18px;background:url('../../images/com/ico_talk.png') no-repeat 0 0;}
+.ico.ico_headphone{width:18px;height:18px;background:url('../../images/com/ico_headphone.png') no-repeat 0 0;}
 
 .ico.ico_check1{width:38px;height:25px;background:url('../../images/com/ico_check1.png') no-repeat 0 0;}
 .ico.ico_info1{width:38px;height:38px;background:url('../../images/com/ico_info1.png') no-repeat 0 0;}
@@ -96,17 +98,21 @@
 
  /* tit */
 .tit_type1{font-size:24px;color:#000;}
-.tit_type2{font-size:16px;color:#000;font-weight:700;}
+.tit_type2{font-size:16px;color:#000;}
+.tit_type2 b{vertical-align: baseline;}
 .tit_type3{font-size:14px;color:#000;}
+.tit_type3 b{vertical-align: baseline;}
 .tit_type4{font-size:12px;color:#000;}
+.tit_type4 b{vertical-align: baseline;}
 
 .text_info {padding-top:60px;}
 .text_info .txt {margin-top:24px;font-size:24px;font-weight:bold;line-height:1.3em;}
 .text_info .txt .c {color:#1f5dbe;vertical-align:baseline;}
 .text_info .txt2{margin-top:15px;color:#999999;}
 
-.text_dot{position:relative;padding-left:8px;font-size:14px;color:#666;}
-.text_dot:after{content:'';display:block;position:absolute;top:5px;left:0;width:3px;height:3px;border-radius:3px;background:#cccccc;}
+.text_dot{position:relative;padding-left:8px;font-size:14px;color:#666;line-height:1.4em;}
+.text_dot:after{content:'';display:block;position:absolute;top:7px;left:0;width:3px;height:3px;border-radius:3px;background:#cccccc;}
+.text_dot.dot_blue:after{background:#1f5dbe;}
 .text_dot.fs13{font-size:13px;}
 .text_dot.fs12{font-size:12px;}
 .text_dot.fs11{font-size:11px;}
@@ -118,10 +124,11 @@
 .text_dash.c_gray4:after{background:#cccccc;}
 .text_dash.f12:after{top:7px;}
 
-
 .text_number{display:table;width:100%;}
 .text_number .num{display:table-cell;width:5px;padding-right:5px;vertical-align:top;white-space:nowrap;}
 .text_number .txt{display:table-cell;width:auto;padding-right:5px;font-size:14px;vertical-align:top;}
+
+.t_link  {display:inline-block;text-decoration:underline;color:#1f5dbe;}
 
 /* size */
 .txt_type1{font-size:11px;}
@@ -179,11 +186,11 @@
 
 .inp_range{position:relative;display:inline-block;position:relative;overflow:hidden;}
 .inp_range input{position:absolute;top:0;left:0;opacity:0;width:100%;height:100%;z-index:10;cursor:pointer;}
-.inp_range i{position:relative;display:block;-webkit-appearance: none;width: 75px;padding:2px;height: 35px;outline: none;-webkit-transition: .2s;border-radius: 35px;cursor:pointer;background:#cbcbcb;}
-.inp_range i:after{content:'';position:absolute;top: 5px;left: 5px;display:inline-block;width: 25px;height: 25px;border-radius: 25px;background:#fff;transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
+.inp_range i{position:relative;display:block;-webkit-appearance: none;width:40px;padding:2px;height:24px;outline: none;-webkit-transition: .2s;border-radius: 35px;cursor:pointer;background:#cbcbcb;}
+.inp_range i:after{content:'';position:absolute;top: 2px;left: 2px;display:inline-block;width: 20px;height: 20px;border-radius: 25px;background:#fff;transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
 .inp_range i:hover:after{background:#cccccc;}
-.inp_range input:checked + i{background:#604226;}
-.inp_range input:checked + i:after{left:45px;}
+.inp_range input:checked + i{background:#1f5dbe;}
+.inp_range input:checked + i:after{left:18px;}
 
 .select_type1{position:relative;display:block;height:38px;}
 .select_type1 .design{position:absolute;top:0;left:0;width:100%;height:40px;line-height:38px;text-align:left;font-size:14px;color:#000000;font-weight:bold;border-bottom:1px solid #ebebeb;background:#ffffff;}
@@ -214,10 +221,13 @@
 .btn_type1  {display:table-cell; height:50px; line-height:48px;font-size:16px;text-align:center;}
 .btn_type1.btn1 {color:#333; border:1px solid #eee;    background:#fff;}
 .btn_type1.btn2 {color:#fff; border:1px solid #1f5dbe; background:#1f5dbe;}
+.btn_type1.btn1:hover, .btn_type1.btn1:active, .btn_type1.btn1:focus {color:#666; border:1px solid #cccfd4; background:#cccfd4;}
+.btn_type1.btn2:hover, .btn_type1.btn2:active, .btn_type1.btn2:focus {color:#718098; background:#0f397b;}
+.btn_type1.disabled {color:#fff; border: 1px solid #c7cdd5; background: #c7cdd5; cursor: no-drop;}
 
 .btn_type1_box.size37 .btn_type1:first-child {width: 30%}
 .btn_type1_box.size37 .btn_type1:last-child {width: 70%}
-.btn_type1_box.size-half .btn {width: 50%}
+.btn_type1_box.size-half .btn_type1 {width: 50%}
 
 .btn_type2_box {}
 .btn_type2 {display:inline-block; height:40px; line-height:38px; font-size:14px; text-align:center; border-radius: 6px; width: 100%;}
@@ -233,17 +243,29 @@
 /* ======================================== 
 	06. Common content
 ========================================  */
-.paragraph .text{margin-top:7px;}
+.paragraph > .text{margin-top:10px;}
 .paragraph .text_dot{margin-top:7px;}
 .paragraph .text_dot.fs12{margin-top:5px;}
 .paragraph .text_dash{margin-top:7px;}
 .paragraph .text_number{margin-top:7px;}
+.paragraph .tbl.type1{margin-top:15px;}
+.paragraph .text_box{margin-top:10px;color:#666;}
+.paragraph .text_box .text{margin-top:7px;color:#666;}
+.paragraph .text_box .text_tit{margin-top:10px;color: #333;}
+.paragraph .step_type1{margin-top:30px;}
 
-.paragraph .tit_type2{margin-top:20px;margin-bottom:15px;}
-.paragraph .tit_type3{margin-bottom:10px;}
+.paragraph .tit_type2{margin-top:35px;}
+.paragraph .tit_type2 + *{margin-top:15px;}
+.paragraph .tit_type3{margin-top:20px;}
+.paragraph .tit_type3 + *{margin-top:10px;}
 .paragraph .tit_type4{margin-top:20px;}
+.paragraph .tit_type4 + *{margin-top:5px;}
+.paragraph .ico_box + *{margin-top:15px;}
 
-.paragraph.type2 .tit_type2{margin-top:35px;margin-bottom:15px;}
+/* 
+.paragraph.type2 .tit_type2{margin-top:35px;}
+.paragraph.type2 .tit_type2 + *{margin-top:15px;}
+.paragraph.type2 .tit_type3{margin-top:20px;} */
 
 .paragraph > *:first-child{margin-top:0 !important;}
 .paragraph .text_box > *:first-child{margin-top:0 !important;}
@@ -251,6 +273,8 @@
 /* boxline */
 .box_line_type1{padding:35px 0;}
 .box_line_type1 .line{height:10px;background:#eeeeee;}
+.box_line_type2{padding:40px 0;}
+.box_line_type2 .line{height:1px;background:#eeeeee;}
 
 /* tab */
 .tab-menu ul{border-bottom:1px solid #f4f4f4;}
@@ -302,9 +326,77 @@
 .grid_data1 .cell:first-child{padding-left:0;}
 .grid_data1 .cell:last-child{padding-right:0;}
 
+/* customer_center_box */
+.customer_center_box{margin-top:35px;}
+.customer_center_box .center_info {padding:15px 18px 15px 20px;background:#f7f7f7;}
+.customer_center_box .center_info .text {line-height:1.3em;}
+.customer_center_box .center_info .text_dot{margin-top:6px;}
+.customer_center_box .center_menu {margin-top:15px;}
+.customer_center_box .center_menu .cellbox.cell2 .cell:first-child{padding-right:5px;}
+.customer_center_box .center_menu .cellbox.cell2 .cell:last-child{padding-left:5px;}
+.customer_center_box .center_menu .btn {display:inline-block;width:100%;height:40px;line-height:38px;text-align:center;border:1px solid #dddddd;border-radius:6px;}
+.customer_center_box .center_menu .btn .ico {margin-right:5px;}
+.customer_center_box .center_menu .btn span {display:inline-block;font-size:14px;color:#666666;vertical-align:baseline;}
+
+/* info_guide */
+.info_guide {margin-top: 40px; font-size: 12px;}
+.info_guide .title { color: #333; display: flex; align-items: center; font-weight: 700;}
+.info_guide .title:before {background: url(../../images/com/ico_info_black.png) no-repeat 0 0; width: 18px; height: 18px; content:""; display: inline-block; background-size: contain; margin-right: 5px;}
+.info_guide .text{margin-top:5px;}
+.info_guide .list {color: #666; margin-top: 5px;}
+.info_guide .list li {padding-left: 8px; line-height: 1.42; position: relative;}
+.info_guide .list li + li{margin-top: 5px;}
+.info_guide .list li:before {display: inline-block;; content: ""; width: 3px; height: 3px; border-radius: 50%; background: #ccc; margin-right: 5px; margin-left: -8px; position: absolute; top: 8px;}
+.info_guide .list li > span {vertical-align: baseline;}
+
+
 /* ======================================== 
-	07. Pagenation
+	07. Table
 ========================================  */
+
+.tbl.type1 table{width:100%;font-size:12px;border-top:1px solid #333333;border-bottom:1px solid #cccccc;}
+.tbl.type1 table th{height:38px;padding:10px 5px;color:#333333;background:#fafafa;}
+.tbl.type1 table tr:first-child th,
+.tbl.type1 table tr:first-child td{border-top:none;}
+.tbl.type1 table thead th{border-bottom:1px solid #eee;}
+.tbl.type1 table tbody th{text-align:left;padding:15px 5px;border-top:1px solid #eee;}
+.tbl.type1 table tbody td{height:38px;padding:15px;font-size:14px;color:#333333;border-top:1px solid #eee;background:#ffffff;}
+.tbl.type1 .text_dot{margin-top:10px;}
+.tbl.type1 .text_dot .txt{margin-top:3px;}
+.tbl.type1 td .text{margin-top:7px;}
+.tbl.type1 td .text:first-child{margin-top:0;}
+.tbl.type1 td *:first-child{margin-top:0 !important;}
+
+.tbl.td_left table tbody td  {text-align:left;}
+.tbl.td_center table tbody td  {text-align:center;}
+.tbl.td_right table tbody td  {text-align:right;}
+.tbl.th_left table tbody th  {text-align:left;}
+.tbl.th_center table tbody th  {text-align:center;}
+.tbl.th_right table tbody th  {text-align:right;}
+
+.tbl.th_14 table th {font-size: 14px;}
+
+.tbl.th_top table tbody th,
+.tbl.td_top table tbody td{vertical-align:top;}
+
+
+/* ======================================== 
+	08. Information Guide
+========================================  */
+.info_guide {margin-top: 40px; font-size: 12px;}
+.info_guide .title { color: #333; display: flex; align-items: center; font-weight: 700;}
+.info_guide .title:before {background: url(../../images/com/ico_info_black.png) no-repeat 0 0; width: 18px; height: 18px; content:""; display: inline-block; background-size: contain; margin-right: 5px;}
+.info_guide .list {color: #666; margin-top: 5px;}
+.info_guide .list li {padding-left: 8px; line-height: 1.42; position: relative;}
+.info_guide .list li + li{margin-top: 5px;}
+.info_guide .list li:before {display: inline-block;; content: ""; width: 3px; height: 3px; border-radius: 50%; background: #ccc; margin-right: 5px; margin-left: -8px; position: absolute; top: 8px;}
+.info_guide .list li > span {vertical-align: baseline;}
+
+
+
+/* ======================================== 
+	00. Pagenation
+========================================  
 .pagenation {margin-top:40px; text-align:center;}
 .pagenation a {font-size:16px; color:#000; margin:0 8px; vertical-align:top; text-align:center;}
 .pagenation .pre, .pagenation .next {display:inline-block; width:28px; height:28px; border:1px solid #cecfd1;}
@@ -318,24 +410,52 @@
 .pagenation .next>span {width:6px; height:10px; background-position:-728px -0px;}
 .pagenation .next.end>span {width:9px; height:10px; background-position:-738px -0px;}
 .pagenation strong {font-size:16px; color:#1779cc; margin:0 8px;}
-.pagenation span.pre.end, .pagenation span.next.end {background-color:#ccc !important; border-color:#ccc !important; opacity:.5;}
+.pagenation span.pre.end, .pagenation span.next.end {background-color:#ccc !important; border-color:#ccc !important; opacity:.5;}*/
 
 /* ======================================== 
 	08. Table
 ========================================  */
 
-table  {margin:15px 0; border-bottom:1px solid #cccccc; border-top:1px solid #333; table-layout:fixed; width:100%;font-size:14px;line-height:18px; border-collapse: separate;}
-table th, 
-table td  {font-size:14px;color:#333;font-weight:normal;word-break:break-all;letter-spacing:-1px;vertical-align:middle; border-top:1px solid #eee; border-left:1px solid #f7f7f7;}
-table th  {padding:5px 10px;font-size:12px;line-height:15px; background: #fafafa;}
-table td  {padding:10px 8px;}
-table tr th:first-child, table tr td:first-child  {border-left:none}
+.tbl.type1 table{width:100%;font-size:12px;border-top:1px solid #333333;border-bottom:1px solid #cccccc;}
+.tbl.type1 table th{height:38px;padding:10px 5px;color:#333333;background:#fafafa;}
+.tbl.type1 table tr:first-child th,
+.tbl.type1 table tr:first-child td{border-top:none;}
+.tbl.type1 table thead th{border-bottom:1px solid #eee;}
+.tbl.type1 table tbody th{text-align:left;padding:15px 5px;border-top:1px solid #eee;}
+.tbl.type1 table tbody td{height:38px;padding:15px;font-size:14px;color:#333333;border-top:1px solid #eee;background:#ffffff;}
+.tbl.type1 .text_dot{margin-top:10px;}
+.tbl.type1 .text_dot .txt{margin-top:3px;}
+.tbl.type1 td .text{margin-top:7px;}
+.tbl.type1 td .text:first-child{margin-top:0;}
+.tbl.type1 td *:first-child{margin-top:0 !important;}
 
-table.tb-half th {font-size: 14px;}
-table.tb-half td {text-align: center;}
+.tbl.td_left table tbody td  {text-align:left;}
+.tbl.td_center table tbody td  {text-align:center;}
+.tbl.td_right table tbody td  {text-align:right;}
+.tbl.th_left table tbody th  {text-align:left;}
+.tbl.th_center table tbody th  {text-align:center;}
+.tbl.th_right table tbody th  {text-align:right;}
 
-table.type2 th  {background:#fff}
+.tbl.th_top table tbody th,
+.tbl.td_top table tbody td{vertical-align:top;}
 
-table.td-center td  {text-align:center;}
-table.td-right td  {text-align:right;}
-table.th-left th  {text-align:left;}
+
+
+/* ======================================== 
+	09. step
+========================================  */
+.step_wrap.step_type1 {counter-reset: chapter 0;}
+.step_type1 .step {font-size: 14px; padding-left: 80px; position: relative;}
+.step_type1 .step + .step {margin-top: 20px;}
+.step_type1 .step:after {border:0.5px dotted #ccc; position: absolute; top: 0; left: 34px; bottom: -25px; content: ""; z-index: -1;}
+.step_type1 .step:last-child:after {border: hidden;}
+
+.step_type1 .step .round {width: 70px; height: 26px; border-radius: 13px; border: 1px solid #666; line-height: 26px; font-size: 12px; text-align:center;
+text-transform: uppercase; display: flex; justify-content: center; align-items: center; float: left; margin-left: -80px; background: #fff;}
+.step_type1 .step .round span {font-weight: 700; margin-left: 5px;}
+.step_type1 .step .round span:after { counter-increment: chapter; content: counter(chapter) " ";}
+
+.step_type1 .step .tit {color: #333; margin-bottom: 4px; height: 26px; line-height: 24px;}
+.step_type1 .step .comment {color: #666; margin-bottom: 15px; line-height: 1.5}
+.step_type1 .step .comment.mt20 {margin-top: 20px;}
+.step_type1 .step .img img {height: auto;}

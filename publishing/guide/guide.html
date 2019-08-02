@@ -7,8 +7,6 @@
 	<link rel='apple-touch-icon' href=''>
 	
 	<title>한국포스증권 :: FOSS Moible</title>
-
-
 	
 	<link rel="stylesheet" type="text/css" href="../common/css/base.css">
 	<link rel="stylesheet" type="text/css" href="../common/css/common.css">
@@ -17,6 +15,7 @@
 	<script type="text/javascript" language="javascript" src="../common/js/ui.js"></script>
 
 	<style type="text/css">
+	body{overflow:auto;}
 	#wrap.guide .content{padding:20px 20px 50px;}
 	.guideH1,
 	.guideH2,
@@ -96,8 +95,9 @@
 					<li><a href="#g_table">Table</a></li>
 					<li><a href="#g_form">Form</a></li>
 					<li><a href="#g_popup">Popup</a></li>
-					<li><a href="#g_paging">Paging</a></li>
+					<!-- li><a href="#g_paging">Paging</a></li>  -->
 					<li><a href="#g_tab">Tab</a></li>
+					<li><a href="#g_info">Information Guide </a></li>
 				</ul>
 			</div>
 		</div>
@@ -145,9 +145,10 @@
 								<td>기본 텍스트 크기 : 14px</td>
 							</tr>
 							<tr>
-								<th>보조 텍스트</th>
+								<th>링크 텍스트</th>
 								<td>
-									
+									<a href="#none" class="t_link">바로가기</a>
+									<a href="#none" class="t_link fs12">바로가기</a>
 								</td>
 							</tr>
 							<tr>
@@ -174,7 +175,7 @@
 								<th>문단 텍스트</th>
 								<td>
 									<div class="btn_type2_box">
-										<a href="../html/common/paragraph.html" class="btn_type2 btn1" target="_blank">문단텍스트 가이드</a>
+										<a href="../guide/paragraph.html" class="btn_type2 btn1" target="_blank">문단텍스트 가이드</a>
 									</div>									
 								</td>
 							</tr>
@@ -219,6 +220,12 @@
 
 				<div class="btn_area">
 					<div class="btn_type1_box">
+						<a href="javascript:void(0);" class="btn_type1 disabled">확인</a>
+					</div>
+				</div>
+				<br />
+				<div class="btn_area">
+					<div class="btn_type1_box">
 						<a href="javascript:void(0);" class="btn_type1 btn2">확인</a>
 					</div>
 				</div>
@@ -258,147 +265,113 @@
 			<div id="g_table" class="g_wrap">
 				<h2 class="guideH2">Table</h2>
 				
-				<h3 class="guideH3">Type1 - default (table)</h3>
+				<h3 class="guideH3">tbl ype1</h3>
 				
-				<!-- table -->
-				<table>
-					<caption>
-						<strong>000 상세표</strong>
-						<span>항목1, 항목2, 항목3 등의 항목을 제공</span>
-					</caption>
-					<colgroup>
-						<col width="30%">
-						<col width="35%">
-						<col width="35%">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col">제목</th>
-							<th scope="col">제목</th>
-							<th scope="col">제목</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">제목</th>
-							<td>내용</td>
-							<td>내용</td>
-						</tr>
-						<tr>
-							<th scope="row">제목</th>
-							<td>내용</td>
-							<td>내용</td>
-						</tr>
-					</tbody>
-				</table>
-				<!-- //table -->
+				<div class="tbl type1">
+					<table>
+						<caption>제목</caption>
+						<colgroup>
+							<col width="33.3333%">
+							<col width="33.3333%">
+							<col width="33.3333%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">우리은행</th>
+								<th scope="col">OTP상태</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">개설 기능 계좌</th>
+								<td>펀드(수익증권, 연금저축)</td>
+								<td>타행 이용등록</td>
+							</tr>
+							<tr>
+								<th scope="row">기산일<sup>주)</sup></th>
+								<td>내용</td>
+								<td>내용</td>
+							</tr>
+							<tr>
+								<th scope="row">미성년자 본인 개설</th>
+								<td>내용</td>
+								<td>내용</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="text_dot fs12 dot_blue">추가인증 및 단말기지정 중 하나는 반드시 등록 이용 <br>(중복선택가능)</div>
+				</div>
+
+				<br>
+
+				<div class="tbl type1 th_top td_right">
+					<table>
+						<caption>제목</caption>
+						<colgroup>
+							<col width="20%">
+							<col width="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">개설 기능 계좌</th>
+								<td>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+									펀드 <br>
+								</td>
+								<td>타행 이용등록</td>
+							</tr>
+							<tr>
+								<th scope="row">미성년자 본인 개설</th>
+								<td>내용</td>
+								<td>내용</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				
 				<br />
 				<!-- table -->
-				<table class="th-left">
-					<caption>
-						<strong>000 상세표</strong>
-						<span>항목1, 항목2, 항목3 등의 항목을 제공</span>
-					</caption>
-					<colgroup>
-						<col width="25%">
-						<col width="75%">
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="col">제목</th>
-							<td>내용입니다.</td>
-						</tr>
-						<tr>
-							<th scope="col">제목</th>
-							<td>내용입니다.</td>
-						</tr>
-					</tbody>
-				</table>
-				<!-- //table -->		
-				<br />
-				<!-- table -->
-				<table class="tb-half">
-					<caption>
-						<strong>000 상세표</strong>
-						<span>항목1, 항목2 설명</span>
-					</caption>
-					<colgroup>
-						<col width="50%">
-						<col width="50%">
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row">제목</th>
-							<td>내용입니다.</td>
-						</tr>
-						<tr>
-							<th scope="row">제목</th>
-							<td>내용입니다.</td>
-						</tr>
-					</tbody>
-				</table>
-				<!-- //table -->							
+				<div class="tbl type1 th_14 td_center th_center">
+					<table >
+						<caption>
+							<strong>000 상세표</strong>
+							<span>항목1, 항목2 설명</span>
+						</caption>
+						<colgroup>
+							<col width="50%">
+							<col width="50%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">제목</th>
+								<td>내용입니다.</td>
+							</tr>
+							<tr>
+								<th scope="row">제목</th>
+								<td>내용입니다.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //table -->						
 				
-				<h3 class="guideH3">Type2 (table class="type2")</h3>
 				
-				<!-- table -->
-				<table class="type2">
-					<caption>
-						<strong>000 상세표</strong>
-						<span>항목1, 항목2, 항목3 등의 항목을 제공</span>
-					</caption>
-					<colgroup>
-						<col width="30%">
-						<col width="35%">
-						<col width="35%">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col">제목</th>
-							<th scope="col">제목</th>
-							<th scope="col">제목</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="col">내용</th>
-							<td>내용<br>내용<br>내용</td>
-							<td>내용</td>
-						</tr>
-						<tr>
-							<th scope="col">내용<br>내용</th>
-							<td>내용</td>
-							<td>내용</td>
-						</tr>
-					</tbody>
-				</table>
-				<!-- //table -->
 				
-				<!-- table -->
-				<table class="type2">
-					<caption>
-						<strong>000 상세표</strong>
-						<span>항목1, 항목2, 항목3 등의 항목을 제공</span>
-					</caption>
-					<colgroup>
-						<col width="20%">
-						<col width="40%">
-						<col width="40%">
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="col">제목</th>
-							<td>내용</td>
-							<td>내용</td>
-						</tr>
-						<tr>
-							<th scope="col">제목</th>
-							<td>내용</td>
-							<td>내용</td>
-						</tr>
-					</tbody>
-				</table>
-				<!-- //table -->
+
+				<h3 class="guideH3">tbl Type2</h3>
+
 			</div>
 			<!-- ========== //Table ========== -->
 			
@@ -574,32 +547,12 @@
 
 					<h3 class="guideH3">type2</h3>
 					<div>
-						<a href="../html/common/layeropup2.html">layeropup2</a>
+						<a href="../guide/layeropup2.html">layeropup2</a>
 					</div>
 				</div>
-								
 			</div>
 			<!-- ========== //Popup ========== -->
-			
-			<!-- ========== Paging ========== -->
-			<div id="g_paging" class="g_wrap">
-				<h2 class="guideH2">Paging</h2>
-				<div>
-					<div class="pagenation">
-						<span class="btn">
-							<a href="#" class="pre end"><span>처음</span></a>
-							<a href="#" class="pre"><span>이전</span></a>
-						</span>
-						<span class="page"><strong>1</strong><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a></span>
-						<span class="btn">
-							<a href="#" class="next"><span>이후</span></a>
-							<a href="#" class="next end "><span>끝</span></a>
-						</span>
-					</div>
-				</div>
-			</div>
-			<!-- ========== //Paging ========== -->
-			
+				
 			
 			<!-- ========== Tab ========== -->
 			<div id="g_tab" class="g_wrap">
@@ -629,6 +582,66 @@
 			</div>
 			<!-- ========== //Tab ========== -->
 			
+			<!-- ========== Information Guide ========== -->
+			<div id="g_info" class="g_wrap">
+				<h2 class="guideH2">Information Guide</h2>
+				
+				<h3 class="guideH3">Type1 - 페이지 하단 안내사항</h3>
+					<!-- 안내사항 -->
+					<div class="info_guide">
+						<p class="title">안내사항</p>
+						<div class="text">
+							외국인 및 법인은 당사 영업부, 미성년자는 우리은행/우체국/당사 영업부, 대리인은 새마을금고/당사 영업부에서 계좌개설이 가능합니다.
+						</div>
+						<ul class="list">
+							<li>한국포스증권 계좌개설은 <span class="c_blue1">매일 07:00~22:00</span>에만 가능합니다.</li>
+							<li>외국인 및 법인은 당사 영업부, 미성년자는 우리은행/우체국/당사 영업부, 대리인은 새마을금고/당사 영업부에서 계좌개설이 가능합니다.</li>
+						</ul>
+					</div>	
+				
+				<h3 class="guideH3">Type2 - 고객센터 안내</h3>
+					<!-- 고객센터 안내 -->
+					<!-- customer_center_box -->
+					<div class="customer_center_box">
+						<div class="center_info">
+							<p class="text">
+								서비스 이용 중 문의사항은 고객센터로 연락하시면 보다 자세한 상담을 받을 수 있습니다.
+							</p>
+							<div class="text_dot c_blue1 fs13">이용시간 : 09:00~18:00 (주말, 공휴일 휴무)</div>
+						</div>
+						<div class="center_menu">
+							<div class="cellbox cell2">
+								<div class="cell"><a href="javascript:void(0);" class="btn"><i class="ico ico_talk"></i><span>카카오톡 문의</span></a></div>
+								<div class="cell"><a href="tel:1644-1744" class="btn"><i class="ico ico_headphone"></i><span>전화 문의</span></a></div>
+							</div>
+						</div>
+					</div>
+					<!-- // customer_center_box -->
+			
+			</div>
+			<!-- ========== //Information Guide ========== -->
+
+
+
+			<!-- ========== Paging ==========
+			<div id="g_paging" class="g_wrap">
+				<h2 class="guideH2">Paging</h2>
+				<div>
+					<div class="pagenation">
+						<span class="btn">
+							<a href="#" class="pre end"><span>처음</span></a>
+							<a href="#" class="pre"><span>이전</span></a>
+						</span>
+						<span class="page"><strong>1</strong><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a></span>
+						<span class="btn">
+							<a href="#" class="next"><span>이후</span></a>
+							<a href="#" class="next end "><span>끝</span></a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- ========== //Paging ========== -->
+
 		</div>
 		<!-- //content -->
 	</div>

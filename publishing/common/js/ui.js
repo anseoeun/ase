@@ -23,6 +23,7 @@ function popOpen(obj){
 	});
 }
 
+
 function popClose(obj){
 	$(obj).hide();
 }
