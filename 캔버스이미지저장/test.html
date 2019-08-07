@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=no">
+	<link rel='shortcut icon' href='' >
+	<link rel='apple-touch-icon' href=''>
+	
+	<title></title>
+
+	
+</head>
+
+<body>
+	<canvas id="canvas" width=540 height=540 style="background-color:#808080;">
+	</canvas>
+	<p></p>
+	<a id="download" download="myImage.jpg" href="" onclick="download_img(this);">Download to myImage.jpg</a>
+
+	<script>
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		var ox = canvas.width / 2;
+		var oy = canvas.height / 2;
+		ctx.font = "42px serif";
+		ctx.textAlign = "center";
+		ctx.textBaseline = "middle";
+		ctx.fillStyle = "#800";
+		ctx.fillRect(ox / 2, oy / 2, ox, oy);
+		
+		_img = new Image();
+		_img.crossOrigin = "anonymous";
+		_img.src = "aaa.jpg";
+			_img.onload = function(e) {
+				ctx.drawImage(_img, 30, 30);
+			}
+
+		//imgClo.src="https://image.ytn.co.kr/general/jpg/2019/0525/201905252245001845_t.jpg";
+
+		download_img = function(el) {
+		var image = canvas.toDataURL("image/jpg")
+		el.href = image;
+		};
+
+	</script>
+</body>	
+</html>
